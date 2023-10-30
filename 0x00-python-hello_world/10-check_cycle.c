@@ -9,25 +9,27 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *present , *next_element;
+	listint_t *present, *next_element;
 
 	if (list == NULL)
 	{
 		return (0);
 	}
 
-	present = list->next;
-	next_element = list->next->next;
+	present = list;
+	next_element = list;
 
 	while (present && next_element && next_element->next)
 	{
+		present = present->next;
+		next_element = next_element->next->next;
 		if (present == next_element)
 		{
 			return (1);
 		}
-
-		present = present->next;
-		next_element = next_elemtn->next->next;
 	}
-	return (0);
+
+	if (current != next_node)
+		return (0);
+	return (1);
 }
