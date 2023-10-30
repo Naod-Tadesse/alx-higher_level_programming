@@ -9,24 +9,16 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *present, *next_element;
-
-	if (list == NULL)
-	{
-		return (0);
-	}
-
-	present = list;
-	next_element = list->next;
+	listint_t *present = list , *next_element = list ;
 
 	while (present && next_element && next_element->next)
 	{
+		present = present->next;
+		next_element = next_element->next->next;
 		if (present == next_element)
 		{
 			return (1);
 		}
-		present = present->next;
-		next_element = next_element->next->next;
 	}
 	return (0);
 }
