@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for char in range(0, 99):
-    print("{} = {}".format(m, hex(m)))
+    print("{} = {}".format(char, hex(char)))
