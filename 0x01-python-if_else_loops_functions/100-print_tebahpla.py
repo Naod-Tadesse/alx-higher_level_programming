@@ -8,4 +8,3 @@ for i in range(0, 26):
         sub = -33
     elif sub == -33:
         sub = 31
-
