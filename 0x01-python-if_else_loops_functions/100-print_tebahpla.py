@@ -2,7 +2,7 @@
 sub = 31
 ind = 91
 for i in range(0, 26):
-    ind = ind + sub 
+    ind = ind + sub
     print("{}".format(chr(ind)), end='')
     if sub == 31:
         sub = -33
