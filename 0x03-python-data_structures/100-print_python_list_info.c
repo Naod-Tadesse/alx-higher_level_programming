@@ -1,9 +1,14 @@
 #include <Python.h>
+/**
+ * print_python_list_info - python list
+ * @p: python object
+ * Return: void
+ */
 
 void print_python_list_info(PyObject *p)
 {
 	long int list_size;
-	PyListObject *size_allocated;\
+	PyListObject *size_allocated;
 	int i;
 	PyObject *item;
 
