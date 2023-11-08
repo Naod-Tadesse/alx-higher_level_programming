@@ -2,10 +2,9 @@
 #include <Python.h>
 
 /**
- * print_python_bytes - Prints bytes information
- *
- * @p: Python Object
- * Return: no return
+ * print_python_bytes - information about bytes
+ * @p: object of python
+ * Return: nothing
  */
 void print_python_bytes(PyObject *p)
 {
@@ -43,10 +42,9 @@ void print_python_bytes(PyObject *p)
 }
 
 /**
- * print_python_list - Prints list information
- *
- * @p: Python Object
- * Return: no return
+ * print_python_list - list info print
+ * @p: obj
+ * Return: none
  */
 void print_python_list(PyObject *p)
 {
