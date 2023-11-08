@@ -15,4 +15,3 @@ def weight_average(my_list=[]):
         return 0
 
     return num / den
-
