@@ -39,14 +39,23 @@ class Square:
                 count = count + 1
         if count != 2:
             raise TypeError("position must be a tubple of 2 positive integers")
+        self.__position = value
 
     def my_print(self):
         """print using #"""
         i = 0
         j = 0
+        k = 0
         if self.__size == 0:
             print("")
+        while k < self.position[1]:
+            print()
+            k = k + 1
         while i < self.__size:
+            j = 0
+            while j < self.__position[0]:
+                print(" ", end="")
+                j = j + 1
             j = 0
             while j < self.__size:
                 print("#", end="")
