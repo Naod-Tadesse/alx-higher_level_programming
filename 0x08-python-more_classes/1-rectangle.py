@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-
 """
 class rectangle
 """
+
 
 class Rectangle:
     """rectangle object"""
@@ -10,7 +10,6 @@ class Rectangle:
         """object initialization"""
         self.width = width
         self.height = height
-
 
     @property
     def width(self):
