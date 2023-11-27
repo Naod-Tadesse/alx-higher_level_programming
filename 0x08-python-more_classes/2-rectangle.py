@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""blueprint for rectangle"""
+
+
 class Rectangle:
     """rectangle object"""
     def __init__(self, width=0, height=0):
