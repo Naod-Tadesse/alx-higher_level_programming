@@ -3,6 +3,8 @@
 class for creating rectangle object
 """
 
+
 class Rectangle:
     """define rectangle here"""
+
     pass
