@@ -1,0 +1,44 @@
+add_integer:
+
+Cases for addition:
+- Adding two integers:
+    >>> add_integer(2, 3)
+    5
+
+    >>> add_integer(-1, 1)
+    0
+
+- Cases floats addition:
+    >>> add_integer(5.5, 2.5)
+    8
+
+    >>> add_integer(5.6, 3.4)
+    8
+
+- Float  and int combination:
+    >>> add_integer(2.5, -1.5)
+    1
+
+Cases special:
+- integer addition parameter:
+    >>> add_integer(10)
+    108
+
+-  and int combination parameter:
+    >>> add_integer(10, 10.5)
+    108
+
+    >>> add_integer(10.5, 10)
+    20
+
+Cases for error:
+- case for typeerror:
+    >>> add_integer('a', 5)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(10, 'b')
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
