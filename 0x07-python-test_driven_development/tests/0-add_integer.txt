@@ -1,0 +1,46 @@
+this file is for testing function 0-add_integer file
+
+
+the import statement
+>>> add_integer =__import__('0-add_integer').add_integer
+
+the tests
+>>> add_integer(1, 2)
+3
+>>> add_integer(1, -2)
+-1
+>>> add_integer(1.4, 2)
+3
+
+>>> add_integer(22.5, -4)
+18
+>>> add_integer(4)
+102
+
+>>> add_integer(-4, -2)
+-6
+>>> add_integer(2.5)
+100
+>>> add_integer(-22.5, -4)
+-26
+
+>>> add_integer(15, "alx")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer("swe", "alx")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
