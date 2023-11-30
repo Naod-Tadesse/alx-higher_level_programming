@@ -3,6 +3,8 @@
 
 
 def matrix_divided(matrix, div):
+    """this function divides every element in the matrix"""
+
     new_mat = []
     if not (isinstance(matrix, list)) or matrix == []:
         raise TypeError(
@@ -22,7 +24,7 @@ def matrix_divided(matrix, div):
         if not (len(item) == len(matrix[0])):
             raise TypeError("Each row of the matrix must have the same size")
 
-    if not (type(div) == int) or (type(div) == float):
+    if not (type(div) == int) and not (type(div) == float):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")

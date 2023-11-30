@@ -1,0 +1,71 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+cases for single
+>>> matrix_divided([[8]], 3)
+[[2.67]]
+>>> matrix_divided([[0]], 3)
+[[0.0]]
+
+>>> matrix_divided([[1, 2, 'x'], [4, 5, 6]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[1, 2, 3], [4, 'y', 6]], 2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+cases for singlerow
+>>> matrix_divided([[0.75, 0.25, 1.5]], 0.5)
+[[1.5, 0.5, 3.0]]
+>>> matrix_divided([[7, 8, 9]], 5)
+[[1.4, 1.6, 1.8]]
+
+cases for empty
+>>> matrix_divided([], 10)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[]], 10)
+[[]]
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+>>> matrix_divided([[999999, 888888], [777777, 666666]], 111111)
+[[9.0, 8.0], [7.0, 6.0]]
+>>> matrix_divided([[0.321, 0.654], [0.987, 0.123]], 0.111)
+[[2.89, 5.89], [8.89, 1.11]]
+>>> matrix_divided([[-5, -6, -7], [-8, -9, -10]], 3)
+[[-1.67, -2.0, -2.33], [-2.67, -3.0, -3.33]]
+>>> matrix_divided([[-1.5, -2.25], [-3.75, -4.5]], 0.75)
+[[-2.0, -3.0], [-5.0, -6.0]]
+
+>>> matrix_divided([[1, 2], [3, 4]], 'test')
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> matrix_divided([[1, 2], [3, 4]], {})
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+
+>>> matrix_divided([[1, 2, 3], [4, 5]], 4)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+>>> matrix_divided([[1, 2, 3], [4, 5, 6], [7]], 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided([[1, 2], [3, 4]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> matrix_divided([[0, 0], [0, 0]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
