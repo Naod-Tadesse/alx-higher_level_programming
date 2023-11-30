@@ -5,7 +5,7 @@ test cases for task 3 function say my name
 >>> say_my_name("Naod", "Tesfay")
 My name is Naod Tesfay
 >>> say_my_name("John")
-My name is John
+My name is John 
 >>> say_my_name(123)
 Traceback (most recent call last):
 ...
@@ -28,3 +28,5 @@ My name is Naod-%# #Tesfay!&@
 
 >>> say_my_name("Nodé", "malacía")
 My name is Nodé malacía
+>>> say_my_name("", "")
+My name is  
