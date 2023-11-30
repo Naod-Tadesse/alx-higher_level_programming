@@ -1,0 +1,40 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("this is alx. this is TDD project.")
+this is alx.
+<BLANKLINE>
+this is TDD project.
+<BLANKLINE>
+>>> text_indentation("A.L?X!S?E")
+A.
+<BLANKLINE>
+L?
+<BLANKLINE>
+X!S?
+<BLANKLINE>
+E
+
+>>> text_indentation("""this is alx
+... <BLANKLINE>
+... swe program
+... cohort18""")
+this is alx
+<BLANKLINE>
+swe program
+cohort18
+
+>>> text_indentation("")
+>>> text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation(".?")
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+>>> text_indentation("No punctuation")
+No punctuation
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
