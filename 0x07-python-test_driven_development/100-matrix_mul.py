@@ -31,11 +31,11 @@ def matrix_mul(m_a, m_b):
 
     for item in m_a:
         if not (len(item) == len(m_a[0])):
-            raise TypeError("each row of m_a must should be of the same size")
+            raise TypeError("each row of m_a must be of the same size")
 
     for item in m_b:
         if not (len(item) == len(m_b[0])):
-            raise TypeError("each row of m_b must should be of the same size")
+            raise TypeError("each row of m_b must be of the same size")
     multiplied = []
     a = 0
     b = 0
