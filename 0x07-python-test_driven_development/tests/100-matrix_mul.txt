@@ -16,6 +16,11 @@ Traceback (most recent call last):
 ...
 TypeError: m_a can't be empty
 
+>>> matrix_mul([[1, 2, 3], [3, 4, 5]], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+ValueError: m_a and m_b can't be multiplied
+
 >>> matrix_mul([[6, 3], [1, 6]], [[3, 3, 8], [9, 1]])
 Traceback (most recent call last):
 ...
