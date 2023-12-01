@@ -3,6 +3,7 @@
 
 
 def matrix_mul(m_a, m_b):
+    """function body"""
     if not (type(m_a) == list):
         raise TypeError("m_a must be a list")
     if not (type(m_b) == list):
