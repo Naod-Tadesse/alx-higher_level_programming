@@ -1,0 +1,22 @@
+doctest for task 7
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bgeo = BaseGeometry()
+>>> bgeo.integer_validator("naod", "tesfay")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+>>> bgeo.integer_validator("naod", 0)
+Traceback (most recent call last):
+...
+ValueError: name must be greater than 0
+>>> bgeo.integer_validator("naod", -1)
+Traceback (most recent call last):
+...
+ValueError: name must be greater than 0
+>>> bgeo.integer_validator("naod", 10)
+>>> bgeo.integer_validator("naod", 0.1)
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
+
