@@ -31,3 +31,9 @@ NameError: name 'li' is not defined
 >>> another_list.append(9)
 >>> another_list.print_sorted()
 [1, 3, 5, 7, 9]
+>>> a=[4, 2, 3]
+>>> mlist = MyList(a)
+>>> mlist.print_sorted()
+[2, 3, 4]
+
+
