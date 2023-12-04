@@ -1,6 +1,7 @@
 edge test cases for 1-my_list
 
 
+
 >>> MyList = __import__('1-my_list').MyList
 
 >>> my_list = MyList([1, 2, 3, 4])
@@ -35,5 +36,16 @@ NameError: name 'li' is not defined
 >>> mlist = MyList(a)
 >>> mlist.print_sorted()
 [2, 3, 4]
+
+>>> q_list = MyList(['a', 'b', 'c'])
+>>> q_list.print_sorted()
+['a', 'b', 'c']
+
+>>> p_list = MyList("test")
+>>> p_list.print_sorted()
+['e', 's', 't', 't']
+
+
+
 
 
