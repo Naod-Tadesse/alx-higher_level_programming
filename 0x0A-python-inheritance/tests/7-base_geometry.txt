@@ -19,4 +19,14 @@ ValueError: name must be greater than 0
 Traceback (most recent call last):
 ...
 TypeError: name must be an integer
+>>> y = __import__('7-base_geometry').BaseGeometry.__doc__
+>>> len(y) > 1
+True
+>>> y = __import__('7-base_geometry').__doc__
+>>> len(y) > 1
+True
+>>> bgeo.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
 
