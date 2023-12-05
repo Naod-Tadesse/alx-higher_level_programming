@@ -4,16 +4,14 @@
 
 def append_after(filename="", search_string="", new_string=""):
     """body"""
-    try:
-        string = ""
-        with open(filename, 'r') as openfile:
-            reads = openfile.readlines()
-            for everyline in reads:
-                string += everyline
-                if search_string in everyline:
-                    string += new_string
 
-        with open(filename, 'w') as openedfile:
-            openedfile.write(string)
-    except FileNotFoundError:
-        pass
+    string = ""
+    with open(filename, 'r') as openfile:
+        reads = openfile.readlines()
+        for everyline in reads:
+            string += everyline
+            if search_string in everyline:
+                string += new_string
+
+    with open(filename, 'w') as openedfile:
+        openedfile.write(string)
