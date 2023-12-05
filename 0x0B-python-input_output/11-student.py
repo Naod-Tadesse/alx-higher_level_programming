@@ -21,4 +21,4 @@ class Student:
     def reload_from_json(self, json):
         """body"""
         for a, b in json.items():
-            setattr(self, k, v)
+            setattr(self, a, b)
