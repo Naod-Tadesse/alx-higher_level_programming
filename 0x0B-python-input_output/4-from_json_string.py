@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-	json representation to object
+json representation to object
 """
 import json
 
