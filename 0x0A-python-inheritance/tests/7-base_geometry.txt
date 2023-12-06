@@ -30,3 +30,23 @@ Traceback (most recent call last):
 ...
 Exception: area() is not implemented
 
+>>> bgeo.integer_validator("naod", None)
+Traceback (most recent call last):
+...
+TypeError: naod must be an integer
+>>> bgeo.integer_validator("naod", {5, 6})
+Traceback (most recent call last):
+...
+TypeError: naod must be an integer
+>>> bgeo.integer_validator("naod", True)
+Traceback (most recent call last):
+...
+TypeError: naod must be an integer
+>>> bgeo.integer_validator("naod", [7])
+Traceback (most recent call last):
+...
+TypeError: naod must be an integer
+>>> bgeo.integer_validator("naod", (4,))
+Traceback (most recent call last):
+...
+TypeError: naod must be an integer
