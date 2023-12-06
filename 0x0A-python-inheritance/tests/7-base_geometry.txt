@@ -54,4 +54,4 @@ TypeError: naod must be an integer
 >>> bgeo.integer_validator("naod")
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: integer_validator() missing 1 required positional argument: 'value'
