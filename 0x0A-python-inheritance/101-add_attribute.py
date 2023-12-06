@@ -5,7 +5,6 @@
 def add_attribute(dictio, name, value):
     """implementation"""
 
-    if hasattr(dictio, "__dict__"):
-        setattr(dictio, name, value)
-    else:
+    if not hasattr(dictio, "__dict__"):
         raise TypeError("Can't add new attribute")
+    setattr(dictio, name, value)
