@@ -21,4 +21,5 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """return the string representation"""
-        return "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
+        name = str(self.__class__.__name__)
+        return "[" + name + "] " + str(self.__width) + "/" + str(self.__height)
