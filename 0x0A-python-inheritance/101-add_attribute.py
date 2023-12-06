@@ -2,10 +2,10 @@
 """add attribute to obj"""
 
 
-def add_attribute(dictio, attribute_name, value):
+def add_attribute(di, diname, divalue):
     """implementation"""
 
-    if hasattr(dictio, "__dict__"):
-        setattr(dictio, attribute_name, value)
+    if hasattr(di, "__dict__"):
+        setattr(di, diname, divalue)
     else:
         raise TypeError("can't add new attribute")
