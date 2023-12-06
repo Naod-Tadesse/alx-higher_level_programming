@@ -5,20 +5,20 @@ doctest for task 7
 >>> bgeo.integer_validator("naod", "tesfay")
 Traceback (most recent call last):
 ...
-TypeError: name must be an integer
+TypeError: naod must be an integer
 >>> bgeo.integer_validator("naod", 0)
 Traceback (most recent call last):
 ...
-ValueError: name must be greater than 0
+ValueError: naod must be greater than 0
 >>> bgeo.integer_validator("naod", -1)
 Traceback (most recent call last):
 ...
-ValueError: name must be greater than 0
+ValueError: naod must be greater than 0
 >>> bgeo.integer_validator("naod", 10)
 >>> bgeo.integer_validator("naod", 0.1)
 Traceback (most recent call last):
 ...
-TypeError: name must be an integer
+TypeError: naod must be an integer
 >>> y = __import__('7-base_geometry').BaseGeometry.__doc__
 >>> len(y) > 1
 True
