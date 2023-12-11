@@ -51,10 +51,11 @@ class Base:
             res = cls(1)
         res.update(**dictionary)
         return res
-
+    
+    @classmethod
     def load_from_file(cls):
         """load from file"""
-        name = cls.__name + ".json"
+        name = cls.__name__ + ".json"
         try:
             with open(name, 'r') as opened:
                 the_list = cls.from_json_string(opened.read())
