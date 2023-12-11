@@ -36,12 +36,11 @@ class Square(Rectangle):
                 setattr(self, v, k)
 
     def to_dictionary(self):
-        """dict"""
-        new = {
-            "id": self.id,
-            "x": self.x,
-            "size": self.width,
-            "y": self.y
-            }
+        """dict rep"""
+        return {
+            'id': self.id,
+            'size': self.width,
+            'x': self.x,
+            'y': self.y
+        }
 
-        return new
