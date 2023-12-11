@@ -59,7 +59,7 @@ class Base:
                 the_list = cls.from_json_string(file.read())
             li = []
             for item in the_list:
-                li.append(cls.create(**dict))
+                li.append(cls.create(**item))
             return li
         except IOError:
             return []
