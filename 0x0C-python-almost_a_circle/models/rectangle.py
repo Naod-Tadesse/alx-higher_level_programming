@@ -69,3 +69,8 @@ class Rectangle(Base):
             for k in range(self.width):
                 print("#", end='')
             print()
+
+    def __str__(self):
+        """srt rep"""
+        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} -"
+                f"self.width/self.height")
