@@ -47,7 +47,7 @@ class Base:
             return
         if cls.__name__ == "Rectangle":
             res = cls(1, 1)
-        if cls.__name__ == "square":
+        if cls.__name__ == "Square":
             res = cls(1)
         res.update(**dictionary)
         return res
