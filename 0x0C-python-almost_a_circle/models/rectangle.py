@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """a class rectangle that inherits from base class"""
 from models.base import Base
+from models.validate import validate
 
 
 class Rectangle(Base):
@@ -22,6 +23,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """setter for height"""
+        validate(value, "height")
         self.__height = value
 
     @property
@@ -32,6 +34,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """setter for width"""
+        validate(value, "width")
         self.__width = value
 
     @property
@@ -42,6 +45,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """setter for x"""
+        validate(value, "x")
         self.__x = value
 
     @property
@@ -52,4 +56,5 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """setter for y"""
+        validate(value, "y")
         self.__y = value
