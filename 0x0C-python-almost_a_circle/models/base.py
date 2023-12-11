@@ -51,7 +51,7 @@ class Base:
             res = cls(1)
         res.update(**dictionary)
         return res
-    
+
     @classmethod
     def load_from_file(cls):
         """load from file"""
