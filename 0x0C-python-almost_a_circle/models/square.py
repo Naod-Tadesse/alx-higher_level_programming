@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """this is square class rep"""
 from models.rectangle import Rectangle
+from models.validate import validate
 
 
 class Square(Rectangle):
@@ -10,5 +11,16 @@ class Square(Rectangle):
         """initialize"""
         super().__init__(size, size, x, y, id)
 
+    @property
+    def size(self):
+        """getter for size"""
+        return self.__width
+
     def __str__(self):
         return (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
+
+    @size.setter
+    def size(self, value):
+        """setter"""
+        self.width = value
+        self.height = value
