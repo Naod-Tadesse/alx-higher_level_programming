@@ -43,6 +43,8 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """instance"""
+        if dictionary == {}:
+            return
         if cls.__name__ == "Rectangle":
             res = cls(1, 1)
         if cls.__name__ == "square":
