@@ -53,10 +53,11 @@ class Base:
         return res
 
     def load_from_file(cls):
+        """load from file"""
         name = cls.__name + ".json"
         try:
             with open(name, 'r') as opened:
-                the_list = cls.from_json_string(file.read())
+                the_list = cls.from_json_string(opened.read())
             li = []
             for item in the_list:
                 li.append(cls.create(**item))
