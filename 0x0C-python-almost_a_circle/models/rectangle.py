@@ -65,7 +65,7 @@ class Rectangle(Base):
 
     def display(self):
         """displaty rect usint #"""
-        for i in self.height:
-            for k in self.width:
+        for i in range(self.height):
+            for k in range(self.width):
                 print("#", end='')
             print()
