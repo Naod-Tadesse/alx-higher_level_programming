@@ -2,6 +2,7 @@
 """a class rectangle that inherits from base class"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """class body"""
 
