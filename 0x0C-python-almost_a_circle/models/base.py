@@ -47,4 +47,5 @@ class Base:
             res = cls(1, 1)
         if cls.__name__ == "square":
             res = cls(1)
+        res.update(**dictionary)
         return res
