@@ -2,6 +2,7 @@
 """this is square class rep"""
 from models.rectangle import Rectangle
 from models.validate import validate
+from models.l import ls
 
 
 class Square(Rectangle):
@@ -24,3 +25,12 @@ class Square(Rectangle):
         """setter"""
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """set attr"""
+        if args:
+            for count, argument in enumerate(args):
+                setattr(self, ls[count], argument)
+        else:
+            for v, k in kwargs.items():
+                setattr(self, v, k)
