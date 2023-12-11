@@ -51,3 +51,15 @@ class Base:
             res = cls(1)
         res.update(**dictionary)
         return res
+
+    def load_from_file(cls):
+        name = clas.__name + ".json"
+        try:
+            with open(name, 'r') as opened:
+                the_list = cls.from_json_string(file.read())
+            li = []
+            for item in the_list:
+                li.append(cls.create(**dict))
+            return li
+        except IOError:
+            return []
