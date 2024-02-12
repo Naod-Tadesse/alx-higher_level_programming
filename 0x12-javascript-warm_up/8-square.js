@@ -6,6 +6,10 @@ if (isNaN(num)) {
   console.log('Missing size');
 } else {
   for (let i = 0; i < num; i++) {
-    console.log('x'.repeat(num));
+    let p = '';
+    for (let k = 0; k < num; k++) {
+      p += 'x';
+    }
+    console.log(p);
   }
 }
