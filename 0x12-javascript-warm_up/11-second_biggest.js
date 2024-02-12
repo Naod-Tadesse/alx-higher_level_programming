@@ -13,4 +13,4 @@ function findMax (num) {
 const first = process.argv.slice(2);
 const index = findMax(process.argv.slice(2));
 first.splice(index, 1);
-console.log(first[findMax(first)]);
+console.log(process.argv.length <= 3 ? 0 : first[findMax(first)]);
