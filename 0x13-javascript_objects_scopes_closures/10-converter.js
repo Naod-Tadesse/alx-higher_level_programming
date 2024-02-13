@@ -2,7 +2,6 @@
 
 exports.converter = function (base) {
   return function (k) {
-    const l = k.toString(base);
-    return l;
+    return k.toString(base);
   };
 };
