@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+""" print all states """
 import MySQLdb
-import sys
+from sys import argv
 if __name__ == "__main__":
-    con = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
-                          db=sys.argv[3], host='localhost')
+    con = MySQLdb.connect(user=argv[1], passwd=argv[2],
+                          db=argv[3], host='localhost')
     connection = con.cursor()
     connection.execute("SELECT * FROM states")
     entries = connection.fetchall()
