@@ -11,7 +11,7 @@ if __name__ == "__main__":
                           db=argv[3], host='localhost')
     connection = con.cursor()
     connection.execute("SELECT * FROM states WHERE name \
-                       LIKE 'N%' ORDER BY states.id")
+                       LIKE BINARY 'N%' ORDER BY states.id")
     entries = connection.fetchall()
     for entry in entries:
         print(entry)
