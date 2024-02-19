@@ -11,8 +11,8 @@ if __name__ == "__main__":
                           db=argv[3], host='localhost')
     connection = con.cursor()
     n = argv[4]
-    connection.execute("SELECT * FROM states WHERE binary name = '{}' ORDER BY id"
-                       .format(n))
+    connection.execute("SELECT * FROM states WHERE binary name = '{}' ORDER\
+                       BY id".format(n))
     entries = connection.fetchall()
     for entry in entries:
         print(entry)
