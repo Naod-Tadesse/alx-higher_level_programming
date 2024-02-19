@@ -2,12 +2,12 @@
 """
 class states for orm
 """
-from sqlalchemy import Column, Integer, String, ext
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+Base = declarative_base()
 
-Base = ext.declarative.declarative_base()
 
-
-class States(Base):
+class State(Base):
     """
     blue print state class
     """
