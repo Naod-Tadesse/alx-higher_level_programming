@@ -12,8 +12,7 @@ if __name__ == '__main__':
     connection = sqlalchemy.create_engine(
         f'mysql+mysqldb://{argv[1]}:{argv[2]}@localhost/{argv[3]}')
     con = sqlalchemy.orm.sessionmaker(bind=connection)()
-    res = con.query(State).order_by(State.id)
-    print(res)
+    res = con.query(State)
     for st in res:
         print(f'{st.id}: {st.name}')
         for ct in st.cities:
