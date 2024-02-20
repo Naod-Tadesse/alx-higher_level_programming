@@ -6,6 +6,7 @@ class city for orm
 import sqlalchemy
 from model_state import Base
 
+
 class City(Base):
     """
     blue print for city class
