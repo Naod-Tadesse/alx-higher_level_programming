@@ -1,3 +1,3 @@
 #!/bin/bash
 # displays header variable
-curl -s -H "X-School-User_id: 98" "$1"
+curl -s -H "X-School-User-id: 98" "$1"
