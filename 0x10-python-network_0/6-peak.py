@@ -10,11 +10,8 @@ def find_peak(list_of_integers):
 
         while lef < r:
             m = (lef + r) // 2
-
-            if list_of_integers[m] < list_of_integers[m + 1]:
-                lef = m + 1
-            else:
-                r = m
+            lef, r = (m + 1, r) \
+                if list_of_integers[m] < list_of_integers[m + 1] else (lef, m)
         return list_of_integers[lef]
     else:
         return None
