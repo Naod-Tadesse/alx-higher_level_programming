@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""show error code"""
+"""this script shows error"""
 import sys
 from urllib import request, error
 

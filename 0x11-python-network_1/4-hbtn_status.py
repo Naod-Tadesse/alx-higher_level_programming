@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Python script that fetches a url"""
+""" sending request to link"""
 import requests
 
 if __name__ == "__main__":
