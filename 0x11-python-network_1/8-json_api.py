@@ -15,7 +15,7 @@ if __name__ == "__main__":
     try:
         resp = result.json()
         if not (res == {}):
-            print(f"[{resp.get("id")}] {resp.get("name")}")
+            print(f'[{resp.get("id")}] {resp.get("name")}')
         else:
             print("No result")
     except ValueError:
