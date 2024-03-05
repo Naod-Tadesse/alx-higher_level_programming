@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""sending get request using requests"""
+"""Python script that fetches a url"""
 import requests
 
 if __name__ == "__main__":
-    result = requests.get("https://intranet.hbtn.io/status")
-    print("Body response:")
-    print(f"	- type: {type(result.text)}")
-    print(f"	- content: {result.content.decode('utf-8')}")
+    res = requests.get("https://alx-intranet.hbtn.io/status")
+    print(f"Body response:\n	- type: {type(res.text)}")
+    print(f"	- content: {res.text}")
