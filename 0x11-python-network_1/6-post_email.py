@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """send post request with email"""
 from sys import argv
-import urllib.request
+import requests
 
 if __name__ == "__main__":
-    dat = urllib.request.Request(argv[1])
-    with urllib.request.urlopen(dat) as resp:
-        result = resp.headers
-        print(dict(result).get("X-Request-Id"))
+    resp = requests.post(argv[1], data=argv[2])
+    print(resp.text)
