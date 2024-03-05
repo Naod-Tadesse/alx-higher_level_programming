@@ -4,5 +4,5 @@ from sys import argv
 import requests
 
 if __name__ == "__main__":
-    resp = requests.post(argv[1], data=argv[2])
+    resp = requests.post(argv[1], data={'email': argv[2]})
     print(resp.text)
