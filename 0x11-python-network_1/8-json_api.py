@@ -9,12 +9,12 @@ if __name__ == "__main__":
     if len(argv) == 1:
         dat = {"q": ""}
     else:
-        data = {"q": argv[1]}
+        dat = {"q": argv[1]}
 
     result = requests.post(link, data=dat)
     try:
         resp = result.json()
-        if not (res == {}):
+        if not (resp == {}):
             print(f'[{resp.get("id")}] {resp.get("name")}')
         else:
             print("No result")
