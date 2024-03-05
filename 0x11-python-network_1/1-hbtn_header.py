@@ -2,11 +2,11 @@
 """request id"""
 
 import urllib.request
-from sys import argv
+import sys
 
 if __name__ == "__main__":
     link = argv[1]
 
     with urllib.request.urlopen(link) as result:
-        print(dict(result.headers).get("X-Request-Id"))
+        print(result.headers['X-Request-Id'])
 
