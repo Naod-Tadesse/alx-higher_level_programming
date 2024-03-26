@@ -4,16 +4,15 @@ const request = require('request');
 const apiUrl = process.argv[2];
 
 request.get(apiUrl, (error, response, body) => {
-  if (error) {
-    console.error(error);
-  }
-
-  if (response.statusCode === 200) {
+  if (!error) {
     const films = JSON.parse(body).results;
-    const moviesWithWedgeAntilles = films.filter(film =>
-      film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')
-    );
-    console.log(moviesWithWedgeAntilles.length);
+    let count = 0;
+    films.forEach(film => {
+      if (film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')) {
+        count++;
+      }
+    });
+    console.log(count);
   } else {
     console.error(error);
   }
