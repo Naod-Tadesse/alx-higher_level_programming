@@ -4,9 +4,14 @@ const request = require('request');
 const apiUrl = process.argv[2];
 
 request.get(apiUrl, (error, response, body) => {
-  if (!error && response.statusCode === 200) {
-    const count = body.split('people/18').length - 1;
-    console.log(count);
+  if (!error) {
+    if (response.statusCode === 200) {
+      const films = JSON.parse(body).results;
+      const moviesWithWedgeAntilles = films.filter(film =>
+        film.characters.includes('https://swapi-api.alx-tools.com/api/people/18/')
+      );
+      console.log(moviesWithWedgeAntilles);
+    }
   } else {
     console.error(error);
   }
