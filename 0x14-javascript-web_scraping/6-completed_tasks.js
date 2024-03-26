@@ -7,18 +7,18 @@ request.get(process.argv[2], (error, response, body) => {
     return;
   }
 
-  const todos = JSON.parse(body);
-  const completedTasksByUser = {};
+  const todosdone = JSON.parse(body);
+  const tasksByUser = {};
 
-  todos.forEach(todo => {
+  todosdone.forEach(todo => {
     if (todo.completed) {
-      if (!completedTasksByUser[todo.userId]) {
-        completedTasksByUser[todo.userId] = 1;
+      if (!tasksByUser[todo.userId]) {
+        tasksByUser[todo.userId] = 1;
       } else {
-        completedTasksByUser[todo.userId]++;
+        tasksByUser[todo.userId]++;
       }
     }
   });
 
-  console.log(completedTasksByUser);
+  console.log(tasksByUser);
 });
